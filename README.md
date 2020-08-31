@@ -14,8 +14,8 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 If you need generate buttons, you just need to text this variants to your JSON file: `btn_cancel` or `btn_submit`
-### "btn_cancel": "your btn name"
-### "btn_submit": "your btn name"
+### `"btn_cancel": "your btn name"`
+### `"btn_submit": "your btn name"`
 
 ```
 Example JSON schema:
