@@ -5,11 +5,11 @@ import '../App.css';
 class ResultForm extends React.Component {
 
   handleChangeForm = (e) => {
-    localStorage.setItem('formData', e.formData)
+    localStorage.setItem('formData', JSON.stringify(e.formData))
   }
 
   handleSubmitForm = () => {
-    alert(localStorage.getItem('formData'))
+    console.log(JSON.parse(localStorage.getItem('formData')))
   }
 
   render () {
@@ -22,7 +22,7 @@ class ResultForm extends React.Component {
           <Form onChange={this.handleChangeForm} schema={storageSchema} uiSchema={storageUiSchema}>
             <div>
               {storageSchema.btn_cancel&& <button className="btn btn-light" type="button">{storageSchema.btn_cancel}</button>}
-              {storageSchema.btn_submit && <button onClick={this.handleSubmitForm} className="btn btn-success" type="submit">{storageSchema.btn_submit}</button>}
+              {storageSchema.btn_submit && <button onClick={this.handleSubmitForm} className="btn btn-success custom-btn" type="submit">{storageSchema.btn_submit}</button>}
             </div>
           </Form>
         </div>
