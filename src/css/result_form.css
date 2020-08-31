@@ -1,0 +1,66 @@
+.rjsf {
+  width: 320px;
+}
+
+.row {
+  margin: 0;
+}
+
+.form-group .control-label {
+  font-size: 15px;
+}
+
+.checkbox input {
+  width: 20px;
+  height: 20px;
+}
+
+.form-additional {
+  margin-right: 2rem;
+}
+
+.col-xs-2 .array-item-remove {
+  position: relative;
+  top: -10px;
+}
+
+.checkbox span {
+  padding-left: 15px;
+  position: relative;
+  top: -4px;
+}
+
+.glyphicon-plus:before {
+  content: "\002b";
+  font-weight: 900;
+}
+
+.glyphicon-remove:before {
+  content: "\2212";
+  font-weight: 900;
+}
+
+.glyphicon-arrow-down:before {
+  content: "down";
+}
+
+.glyphicon-arrow-up:before {
+  content: "up";
+}
+
+.btn-default {
+  background-color: aliceblue;
+  border: solid 1px #222;
+}
+
+.btn-danger {
+  border: solid 1px #222;
+}
+
+.btn-group {
+  margin-bottom: 1rem;
+}
+
+.glyphicon {
+  font-style: inherit;
+}
