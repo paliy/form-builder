@@ -24,11 +24,4 @@ class DateField extends React.Component {
   }
 }
 
-// {
-//     "datefield": {
-//         "type": "datefield",
-//         "label": "date field"
-//     }
-// }
-
 export default DateField;

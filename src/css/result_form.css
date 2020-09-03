@@ -1,11 +1,3 @@
-.rjsf {
-  width: 320px;
-}
-
-.row {
-  margin: 0;
-}
-
 .form-group .control-label {
   font-size: 15px;
 }
@@ -15,56 +7,27 @@
   height: 20px;
 }
 
-.form-additional {
-  margin-right: 2rem;
-}
-
-.col-xs-2 .array-item-remove {
-  position: relative;
-  top: -10px;
-}
-
 .checkbox span {
   padding-left: 15px;
   position: relative;
   top: -4px;
 }
 
-.glyphicon-plus:before {
-  content: "\002b";
-  font-weight: 900;
+.radio-block {
+  display: flex;
+  justify-content: space-between;
 }
 
-.glyphicon-remove:before {
-  content: "\2212";
-  font-weight: 900;
+.radio-control {
+  width: 25px;
+  height: 25px;
 }
 
-.glyphicon-arrow-down:before {
-  content: "down";
+.checkbox {
+  display: flex;
+  justify-content: space-between;
 }
 
-.glyphicon-arrow-up:before {
-  content: "up";
-}
-
-.btn-default {
-  background-color: aliceblue;
-  border: solid 1px #222;
-}
-
-.btn-danger {
-  border: solid 1px #222;
-}
-
-.btn-group {
-  margin-bottom: 1rem;
-}
-
-.glyphicon {
-  font-style: inherit;
-}
-
-.custom-btn {
-  margin-bottom: 5rem
+.title, .textfield, .numberfield, .textarea, .datefield, .radio, .button, .checkbox {
+  margin: 1rem 0;
 }

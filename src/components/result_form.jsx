@@ -10,13 +10,6 @@ import '../App.css';
 
 class ResultForm extends React.Component {
 
-  handleSubmit = () => {
-    Object.keys(sessionStorage).map((key, ind) => {
-      console.log(key, sessionStorage[key])
-      return null
-    })
-  }
-
   getFormElement = (elementName, elementSchema) => {
     const props = {
       name: elementName,
@@ -56,12 +49,21 @@ class ResultForm extends React.Component {
 
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
+    console.log(sessionStorage)
+  }
+
   render () {
     const storageSchema = localStorage.getItem('schema') ? JSON.parse(localStorage.getItem('schema')) : {}
 
     return (
       <div className="app-result">
         <div className="app-content">
+          {Object.keys(storageSchema).map( (key, ind) => (
+            key === "title" && <h1 key={key}>{storageSchema[key]}</h1>
+            ))
+          }
           <form onSubmit={this.handleSubmit}>
             {Object.keys(storageSchema).map( (key, ind) => (
               <div className={key} key={key}>

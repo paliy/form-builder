@@ -20,7 +20,7 @@ class ConfigForm extends React.Component {
   handleSubmit = () => {
     try {
       const schema = this.state.schema === undefined ? {} : JSON.parse(this.state.schema)
-      // change localStorage to sessionStorage
+
       localStorage.setItem('schema', JSON.stringify(schema))
     } catch(error) {
       this.setState({

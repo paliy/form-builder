@@ -10,39 +10,28 @@ class RadioButton extends React.Component {
 
   render () {
     const { label, options } = this.props
-    console.log('op', options)
     const selectedOption = this.state.selectedOption
 
     return (
-      <div onChange={this.handleChange}>
+      <>
         {label && <p>{label}</p>}
         {Object.keys(options).map( (key, ind) => (
-          <>
+          <div className="radio-block" key={key}>
             {key && <label>{options[key]}</label>}
             <input
-              className="form-control"
+              onChange={this.handleChange}
+              className="radio-control"
               type="radio"
               checked={selectedOption ? selectedOption === options[key] : false}
               value={options[key]}
               name={key}
               id={key}
             />
-          </>
+        </div>
         ))}
-      </div>
+      </>
     );
   }
-
-  // {
-  //     "radio": {
-  //         "type": "radio",
-  //         "label": "radio oprosik",
-  //         "options": {
-  //             "radio1": "Yuriy"
-  //             "radio2": "Yuriy 2"
-  //         }
-  //     }
-  // }
 
   handleChange = (e) => {
     sessionStorage.setItem('selectedOption', e.target.value)

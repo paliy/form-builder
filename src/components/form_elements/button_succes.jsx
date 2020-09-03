@@ -16,10 +16,11 @@ class SubmitButton extends React.Component {
   }
 
   // handleSubmit = () => {
-  //   Object.keys(sessionStorage).map((key, ind) => {
-  //     console.log(key, sessionStorage[key])
-  //     return null
-  //   })
+  //   // Object.keys(sessionStorage).map((key, ind) => {
+  //   //   console.log(key, sessionStorage[key])
+  //   //   return null
+  //   // })
+  //   console.log(sessionStorage)
   // }
 }
 
