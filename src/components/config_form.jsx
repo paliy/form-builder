@@ -17,20 +17,11 @@ class ConfigForm extends React.Component {
     })
   }
 
-  handleChangeUiSсhemaInput = (newValue, e) => {
-    this.setState({
-      uiSchema: newValue,
-      error: false
-    })
-  }
-
   handleSubmit = () => {
     try {
       const schema = this.state.schema === undefined ? {} : JSON.parse(this.state.schema)
-      const uiSchema = this.state.uiSchema === undefined ? {} : JSON.parse(this.state.uiSchema)
-
+      // change localStorage to sessionStorage
       localStorage.setItem('schema', JSON.stringify(schema))
-      localStorage.setItem('uiSchema', JSON.stringify(uiSchema))
     } catch(error) {
       this.setState({
         error: true,
@@ -56,17 +47,7 @@ class ConfigForm extends React.Component {
                 <MonacoEditor
                   onChange={this.handleChangeSсhemaInput}
                   language="json"
-                  width="500"
-                  height="400"
-                  options={options}
-                />
-              </div>
-              <div className="schema-editor">
-                <p className="editor-title">JSON uiSchema</p>
-                <MonacoEditor
-                  onChange={this.handleChangeUiSсhemaInput}
-                  language="json"
-                  width="500"
+                  width="900"
                   height="400"
                   options={options}
                 />
