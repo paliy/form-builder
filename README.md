@@ -17,59 +17,50 @@ If you need generate buttons, you just need to text this variants to your JSON f
 ### `"btn_cancel": "your btn name"`
 ### `"btn_submit": "your btn name"`
 
+### Example JSON schema:
 ```
-Example JSON schema:
-
 {
-  "title": "A list of tasks",
-  "type": "object",
-  "required": [
-    "title"
-  ],
-  "btn_submit": "Sumbit button!",
-  "properties": {
-    "title": {
-      "type": "string",
-      "title": "Task list title"
-    },
-    "tasks": {
-      "type": "array",
-      "title": "Tasks",
-      "items": {
-        "type": "object",
-        "required": [
-          "title"
-        ],
-        "properties": {
-          "title": {
-            "type": "string",
-            "title": "Title",
-            "description": "A sample title"
-          },
-          "details": {
-            "type": "string",
-            "title": "Task details",
-            "description": "Enter the task details"
-          },
-          "done": {
-            "type": "boolean",
-            "title": "Done?",
-            "default": false
-          }
-        }
-      }
+  "textfield": {
+    "type": "textfield",
+    "name": "client",
+    "label": "Client name",
+    "required": true
+  },
+  "numberfield": {
+    "type": "numberfield",
+    "name": "age",
+    "label": "Age",
+    "required": true
+  },
+  "textarea": {
+    "type": "textarea",
+    "name": "description",
+    "label": "About client",
+    "required": true
+  },
+  "checkbox": {
+    "type": "checkbox",
+    "name": "isMarried",
+    "label": "Single",
+    "required": true
+  },
+  "datefield": {
+    "type": "datefield",
+    "name": "dateOfBirth",
+    "label": "Date of birth",
+    "required": true
+  },
+  "radio": {
+    "type": "radio",
+    "label": "Preferring",
+    "options": {
+      "radio1": "coca-cola",
+      "radio2": "fanta",
+      "radio3": "pepsi"
     }
-  }
-}
-
-Example uiSchema:
-
-{
-  "tasks": {
-    "items": {
-      "details": {
-        "ui:widget": "textarea"
-      }
-    }
+  },
+  "button": {
+    "type": "submit",
+    "title": "Submit btn"
   }
 }
